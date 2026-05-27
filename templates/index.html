@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Agua</title>
+</head>
+<body>
+
+    <h1>Sistema de Agua de la Comunidad</h1>
+
+    <h2>Estado Actual</h2>
+
+    <p><strong>¿Hay agua?</strong> {{ agua.hay_agua }}</p>
+
+    <p><strong>Cantidad:</strong> {{ agua.cantidad }}</p>
+
+    <p><strong>Hora de llegada:</strong> {{ agua.hora_llegada }}</p>
+
+    <p><strong>Mensaje:</strong> {{ agua.mensaje }}</p>
+
+    <hr>
+
+    <h2>Actualizar Información</h2>
+
+    <form method="POST" action="/actualizar">
+
+        <label>¿Hay agua?</label>
+        <select name="hay_agua">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+        </select>
+
+        <br><br>
+
+        <label>Cantidad:</label>
+        <input type="text" name="cantidad">
+
+        <br><br>
+
+        <label>Hora de llegada:</label>
+        <input type="text" name="hora_llegada">
+
+        <br><br>
+
+        <label>Mensaje:</label>
+        <input type="text" name="mensaje">
+
+        <br><br>
+
+        <button type="submit">Actualizar</button>
+
+    </form>
+
+</body>
+</html>
